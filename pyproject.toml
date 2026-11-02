@@ -1,0 +1,19 @@
+[project]
+name = "ArknightsPRTS"
+version = "1.0.0"
+description = "GsCore AI 工具插件：通过 PRTS.wiki 查询明日方舟干员/敌人/公招资料"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "AthenaHibou" }]
+
+dependencies = [
+    "httpx>=0.24.0",
+    "beautifulsoup4>=4.11.1",
+    "lxml>=4.9.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/AthenaHibou/ArknightsPRTS"
+Repository = "https://github.com/AthenaHibou/ArknightsPRTS"
+Issues = "https://github.com/AthenaHibou/ArknightsPRTS/issues"
