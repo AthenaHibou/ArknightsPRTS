@@ -16,7 +16,7 @@ GsCore 的明日方舟资料查询 **AI 工具插件**：让机器人通过 [PRT
 ## 环境要求
 
 - Python >= 3.11
-- GsCore >= 0.11.x（推荐）
+- GsCore 上游 `0.11.x`（主目标），或 `AthenaHibou/gsuid_core` 的 `main`（基于 `0.10.7` + 定制补丁）
 - **必须开启 GsCore AI Core 并配置可用模型**，否则插件不会产生任何用户可见效果
 - 需要能访问 `https://prts.wiki`
 
@@ -80,7 +80,9 @@ AI 会调用以下工具：
 
 ## 兼容性
 
-- 以 GsCore `0.11.x` 为主要支持基线。
+- **主目标**：上游 `Genshin-bots/gsuid_core` 的 `master`，当前为 `0.11.2`。
+- **Fork 目标**：`AthenaHibou/gsuid_core` 的 `main`，基于 `0.10.7` + 定制补丁；AI Core 行为可能与上游不同。
+- 代码按上游 `0.11.2` 的 API 编写；导入与关键符号已做过静态对照，实际运行仍取决于 AI Core 配置和模型状态。
 - 使用了 `ai_tools` 的 `covers` / `aliases` / `context_tags` 元数据；旧核心缺少这些参数时可能不影响加载，但 AI 召回效果会下降。
 - 纯 AI 工具插件：AI Core 关闭时不会注册工具，也不会产生用户可见功能。
 
